@@ -1,6 +1,6 @@
 import React from "react"
 
-import TodosList from "./ToDosList.js";
+import TodosList from "./TodosList";
 
 class TodoContainer extends React.Component {
 
