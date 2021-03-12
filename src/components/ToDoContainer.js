@@ -1,4 +1,7 @@
 import React from "react"
+
+import TodosList from "./ToDosList.js";
+
 class TodoContainer extends React.Component {
 
   state = {
@@ -21,14 +24,12 @@ class TodoContainer extends React.Component {
    ]
   };
 
-    render() {
-      return (
-        <ul>
-          {this.state.todos.map(todo => (
-            <li>{todo.title}</li>
-          ))}
-        </ul>
-      );
-    }
+      render() {
+        return (
+          <div>
+            <TodosList todos={this.state.todos} />
+          </div>
+        );
+      }
 }
 export default TodoContainer
