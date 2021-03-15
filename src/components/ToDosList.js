@@ -1,6 +1,6 @@
 
 import React from "react"
-import ToDoItem from "./ToDoItem"
+import TodoItem from "./TodoItem"
 
 
 
