@@ -2,8 +2,11 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 // component file
-import ToDoContainer from "./components/ToDoContainer"
+import TodoContainer from "./components/TodoContainer"
 
-ReactDOM.render(<ToDoContainer/>, document.getElementById("root"))
-
-
+ReactDOM.render(
+  <React.StrictMode>
+    <TodoContainer />
+  </React.StrictMode>,
+  document.getElementById("root")
+)
