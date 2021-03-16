@@ -4,7 +4,6 @@ import TodosList from "./TodosList"
 import Header from "./Header"
 
 class TodoContainer extends React.Component {
-
   state = {
    todos: [
      {
@@ -25,10 +24,16 @@ class TodoContainer extends React.Component {
    ]
   };
 
-  handleChange = (id) => {
-  console.log("clicked", id);
-  };
-
+  const handleChange = id => {
+    setTodos(prevState => prevState.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo, completed: !todo.completed
+        }
+      }
+      return todo
+    }))
+  }
       render() {
         return (
           <div>
@@ -36,6 +41,7 @@ class TodoContainer extends React.Component {
             <TodosList todos={this.state.todos} handleChangeProps={this.handleChange} />
           </div>
         );
-      }
+
 }
+
 export default TodoContainer
