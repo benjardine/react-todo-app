@@ -57,10 +57,23 @@ class TodoContainer extends React.Component {
       })
     }
 
+    // saving data to local storage. You will lose this data when
+    // you reload the page however it will be stored in the
+    // local storage to use again.
     componentDidUpdate(prevProps, prevState) {
       if(prevState.todos !== this.state.todos) {
         const temp = JSON.stringify(this.state.todos)
         localStorage.setItem("todos", temp)
+      }
+    }
+
+    componentDidMount() {
+      const temp = localStorage.getItem("todos")
+      const loadedTodos = JSON.parse(temp)
+      if (loadedTodos) {
+        this.setState({
+          todos : loadedTodos
+        })
       }
     }
 
