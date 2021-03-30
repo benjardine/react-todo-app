@@ -67,6 +67,8 @@ class TodoContainer extends React.Component {
       }
     }
 
+    // saved data in the local storage will be loaded into the DOM
+    // as it is now called in the component did mount.
     componentDidMount() {
       const temp = localStorage.getItem("todos")
       const loadedTodos = JSON.parse(temp)
