@@ -20,7 +20,7 @@ const TodoContainer = () => {
       })
     )
   }
-
+  // converted to use state hook
   const delTodo = id => {
     setTodos([
       ...todos.filter(todo => {
