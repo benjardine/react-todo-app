@@ -20,7 +20,7 @@ const Header = () => {
           textAlign: "center",
         }}
       >
-        todos
+        Daily-list
       </h1>
     </header>
   )
